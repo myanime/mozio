@@ -1,0 +1,41 @@
+The main part is geojson_parser.py everything else is the REST server. There is a readme.txt file with the installation instructions for the script. And also a setup script
+
+I have set up a demo server at http://mediapartners.tk/ you can make requests to it like this:
+
+curl -H "Content-Type: application/json" -X POST -d '{"location" : [34.15, 44.48, 34.15, 44.49, 34.17, 44.49, 34.17, 44.48, 34.15, 44.48]}' http://mediapartners.tk/
+
+-or-
+http http://mediapartners.tk/
+(needs httpie installed)
+
+You can also use the HTML API interface:
+to post and batch get all:
+http://mediapartners.tk/
+
+Paste this into the box and press post
+{
+    "name" : "Crimea Deliveries",
+    "email" : "crimea@whitehouse.com",
+    "phone_number" : 456987,
+    "language" = "russian",
+    "location" : [34.15, 44.48, 34.15, 44.49, 34.17, 44.49, 34.17, 44.48, 34.15, 44.48]
+}
+
+-or-
+
+{
+    "location" : [34.15, 44.48, 34.15, 44.49, 34.17, 44.49, 34.17, 44.48, 34.15, 44.48]
+}
+
+
+to do get, update, delete:
+http://mediapartners.tk/1 
+
+The server is at gcloud, it is trivial to set it up on AWS, I didnt do it on AWS for financial reasons. 
+
+The POST and Get functions works more or less as expected, you can update primitavely by overriding the "geojson_object" field. 
+
+I would like to work on you projects but to get something like this working properly, I would say 2-3 weeks. Sometimes you can spend a day or two just trying to solve some relatively simple issues. I am willing to work cheap, but your timeframe and expectations for this task were a little unrealistic. 
+
+Regards
+Ryan
