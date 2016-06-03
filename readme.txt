@@ -23,9 +23,9 @@ export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8
 sudo dpkg-reconfigure locales
 
-virtualenv crystal_knows
-tar -xzf crystal_knows.tar.gz -C ./mozio/
-source crystal_knows/bin/activate
+virtualenv mozio
+tar -xzf mozio.tar.gz -C ./mozio/
+source mozio/bin/activate
 cd mozio
 pip install django
 pip install selenium
